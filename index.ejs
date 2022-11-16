@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+</head>
+
+<body>
+    <div class="container" > budget index</div>
+    <h1>Budgtr ALL</h1>
+    <h3>$<%=bankAccount%></h3>
+    <button><a href="/budgets/new"> create income </a></button>
+    <table>
+        <%for(let i=0;i<budget.length;i++){%>
+            <tr>
+                <td><%=budget[i].date%></td>
+                <td><a href="/budgets/<%=i%>"><%=budget[i].name%></a></td>
+                <td><%=budget[i].amount%></td>
+                
+            </tr>
+        <%}%>
+    </table>
+</body>
+</html>
